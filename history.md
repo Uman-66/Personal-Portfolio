@@ -33,3 +33,18 @@
 ### Verification
 - `npm run build` passed with all homepage, research, and project routes statically generated.
 - `npm run lint` passed.
+
+## 2026-10-01 — Phase 4
+
+### Added
+- Added canonical `SITE_URL`, Open Graph metadata, Person JSON-LD, static sitemap, robots route, and initials favicon.
+- Replaced starter README with content-editing, asset replacement, and Vercel/GitHub Pages deployment instructions.
+- Added `AUDIT.md`, `NOT-IN-CV.md`, and `TEST-REPORT.md` documenting source traceability, excluded facts, and verification evidence.
+- Added static-export compatibility for metadata routes.
+
+### Verification
+- `npm run build` passed and generated homepage, five detail routes, sitemap, robots, and favicon.
+- `npm run lint` passed.
+- Placeholder scan of generated `out/` passed.
+- Local checks returned HTTP 200 for homepage, one research page, one project page, robots, sitemap, and CV PDF.
+- Lighthouse was not run; no Lighthouse score is claimed.
