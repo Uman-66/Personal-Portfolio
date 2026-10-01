@@ -72,3 +72,9 @@
 ### Verification
 - `npm run build` passed with all static routes generated.
 - `npm run lint` passed.
+
+## 2026-10-01 — Removed duplicate section shortcuts
+
+### Removed
+- Removed the “Section shortcuts” navigation block below the current-focus list because the sticky top navigation already provides the same links.
+- Removed its unused CSS and icon import.

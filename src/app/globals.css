@@ -58,7 +58,7 @@ a:focus-visible, button:focus-visible {
 .icon-button, .menu-button { display: grid; place-items: center; border: 1px solid var(--border); color: var(--muted); background: var(--surface); border-radius: 8px; width: 36px; height: 36px; cursor: pointer; }
 .menu-button { display: none; }
 .main-content { padding-block: 4.5rem 6rem; }
-.hero, .facts-grid, .working-section, .quick-links, .cv-section, .contact-section { animation: fade-up 260ms ease both; }
+.hero, .facts-grid, .working-section, .cv-section, .contact-section { animation: fade-up 260ms ease both; }
 .hero { animation-delay: 20ms; }
 .facts-grid { animation-delay: 40ms; }
 .working-section { animation-delay: 60ms; }
@@ -87,9 +87,6 @@ h2 { margin: .3rem 0 0; font-size: 1.55rem; }
 .focus-list { list-style: none; padding: 0; margin: 0; }
 .focus-list li { padding: .8rem 0 .8rem 1.3rem; border-bottom: 1px solid var(--border); position: relative; color: var(--muted); }
 .focus-list li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); position: absolute; left: 0; top: 1.45rem; }
-.quick-links { display: flex; flex-wrap: wrap; gap: .6rem 1.1rem; margin-top: 3.5rem; }
-.quick-links a { display: inline-flex; align-items: center; gap: .25rem; color: var(--muted); font-size: .86rem; }
-.quick-links a:hover { color: var(--accent); }
 .cv-section { margin-top: 6rem; padding-top: 2.75rem; border-top: 1px solid var(--border); scroll-margin-top: 88px; }
 .section-heading { margin-bottom: 1.5rem; }
 .content-card, .timeline-card { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 1.25rem; }

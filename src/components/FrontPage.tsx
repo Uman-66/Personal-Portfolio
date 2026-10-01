@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { ArrowUpRight, Download, Link2, Mail } from "lucide-react";
+import { Download, Link2, Mail } from "lucide-react";
 import { facts, profile, workingOn } from "@/data/profile";
-import { cvSections } from "@/data/sections";
 
 export function FrontPage() {
   return (
@@ -60,13 +59,6 @@ export function FrontPage() {
         </ul>
       </section>
 
-      <nav className="quick-links" aria-label="Section shortcuts">
-        {cvSections.map((section) => (
-          <a key={section.id} href={`#${section.id}`}>
-            {section.label} <ArrowUpRight size={15} aria-hidden="true" />
-          </a>
-        ))}
-      </nav>
     </>
   );
 }
