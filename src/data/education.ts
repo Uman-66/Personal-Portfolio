@@ -5,4 +5,5 @@ export const education = {
   expected: "Expected 2028",
   gpa: "Cumulative GPA: 3.69 / 4.00",
   recentGpa: "Recent Semester: 4.00 / 4.00",
+  scholarship: "Secured a fully funded, merit-based bachelor's scholarship.",
 } as const;

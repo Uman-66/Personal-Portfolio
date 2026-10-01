@@ -1,6 +1,6 @@
 export const experience = {
   company: "FlyRank",
-  location: "Remote",
+  location: "Chicago, Illinois, United States (Remote)",
   title: "ML Engineer Intern",
   dates: "July 2026 – September 2026",
   bullets: [

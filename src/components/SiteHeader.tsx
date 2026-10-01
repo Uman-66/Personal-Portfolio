@@ -5,6 +5,13 @@ import { useState } from "react";
 import { cvSections } from "@/data/sections";
 import { ThemeToggle } from "./ThemeToggle";
 
+const primarySectionIds = new Set([
+  "education",
+  "experience",
+  "research-projects",
+  "technical-projects",
+]);
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
@@ -12,7 +19,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-inner">
         <a className="wordmark" href="#top" onClick={() => setOpen(false)}>
-          MRA<span>.</span>
+          Muhammad Rumman Aslam<span>.</span>
         </a>
         <button
           type="button"
@@ -25,10 +32,18 @@ export function SiteHeader() {
         </button>
         <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
           {cvSections.map((section) => (
-            <a key={section.id} href={`#${section.id}`} onClick={() => setOpen(false)}>
+            <a
+              key={section.id}
+              className={primarySectionIds.has(section.id) ? undefined : "secondary-nav-link"}
+              href={`#${section.id}`}
+              onClick={() => setOpen(false)}
+            >
               {section.label}
             </a>
           ))}
+          <a className="contact-nav-link" href="#contact" onClick={() => setOpen(false)}>
+            Contact
+          </a>
           <ThemeToggle />
         </nav>
       </div>

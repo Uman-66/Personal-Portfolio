@@ -1,9 +1,11 @@
 # Not in CV
 
-These facts were found in supporting files but are not rendered because they were not approved as CV additions:
+These facts were found in supporting files. The two additional projects below were later approved by the user and are now rendered:
 
-- Robust Multimodal Learning for Neurological Disease Prediction Under Missing Modalities
-- GraphBRAIN-ABIDE
+- Robust Multimodal Learning for Neurological Disease Prediction Under Missing Modalities — approved and rendered in Technical Projects
+- GraphBRAIN-ABIDE — approved and rendered in Technical Projects
+- IBM Bob 2.0 Modernizer — approved and rendered in Technical Projects
+- WarrantyVault — approved and rendered in Technical Projects
 - AMD Developer Hackathon participation
 - AI Factory Hackathon participation
 - Hack-Nation / ElevenLabs Challenge participation
@@ -13,4 +15,4 @@ These facts were found in supporting files but are not rendered because they wer
 - NSRI
 - A fully funded MS/PhD goal for Fall 2028
 
-The CV-backed project pages do not use these facts.
+The project pages avoid unsupported claims beyond the source-backed descriptions and the user's explicit approval.

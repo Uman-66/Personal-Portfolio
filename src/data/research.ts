@@ -11,19 +11,6 @@ export type ResearchStudy = {
 
 export const research: ResearchStudy[] = [
   {
-    slug: "breast-cancer-detection",
-    title: "Breast Cancer Detection & Histopathological Image Analysis",
-    status: "In progress",
-    summary: "An ensemble deep learning study for malignancy detection from histopathological images.",
-    result: "The study focuses on model generalization, diagnostic accuracy, and robustness.",
-    bullets: [
-      "Engineered an ensemble of deep learning models, integrating CNNs and Vision Transformers to enhance malignancy detection.",
-      "Applied advanced feature extraction and hybrid feature fusion to improve model generalization, diagnostic accuracy, and robustness.",
-    ],
-    tags: ["CNNs", "Vision Transformers", "Histopathology", "Feature fusion"],
-    limitations: "Further results are not stated in the CV.",
-  },
-  {
     slug: "trustclinai",
     title: "TrustClinAI: Evaluating the Trustworthiness of Clinical AI",
     status: "In progress",

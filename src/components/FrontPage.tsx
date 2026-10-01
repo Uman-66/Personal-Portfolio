@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Download, Link2, Mail } from "lucide-react";
-import { facts, profile, workingOn } from "@/data/profile";
+import { ArrowUpRight, Download, Mail } from "lucide-react";
+import { facts, profile } from "@/data/profile";
+import { BrandIcon } from "./BrandIcon";
 
 export function FrontPage() {
   return (
@@ -17,23 +18,33 @@ export function FrontPage() {
           />
         </div>
         <div className="hero-copy">
-          <p className="eyebrow">AI / ML · Software Engineering</p>
+          <p className="eyebrow">AI/ML Engineer · Software Engineering Undergraduate</p>
           <h1 id="intro-title">{profile.name}</h1>
           <p className="role">{profile.role}</p>
           <p className="intro">{profile.intro}</p>
-          <div className="button-row">
-            <a className="button button-primary" href="/cv.pdf" download>
-              <Download size={16} aria-hidden="true" /> Download CV
+          <div className="hero-actions">
+            <a className="cv-download" href="/Resume.pdf" download>
+              <span className="cv-download-mark"><Download size={17} aria-hidden="true" /></span>
+              <span>Download CV</span>
+              <ArrowUpRight size={17} aria-hidden="true" />
             </a>
-            <a className="button" href={profile.links.github} target="_blank" rel="noreferrer">
-              <Link2 size={16} aria-hidden="true" /> GitHub
-            </a>
-            <a className="button" href={profile.links.linkedin} target="_blank" rel="noreferrer">
-              <Link2 size={16} aria-hidden="true" /> LinkedIn
-            </a>
-            <a className="button" href={`mailto:${profile.email}`}>
-              <Mail size={16} aria-hidden="true" /> Email
-            </a>
+            <div className="social-links" aria-label="Social and contact links">
+              <a className="social-link" href={`mailto:${profile.email}`}>
+                <Mail size={18} aria-hidden="true" /><span>Email</span>
+              </a>
+              <a className="social-link" href={profile.links.github} target="_blank" rel="noreferrer">
+                <BrandIcon name="github" /><span>GitHub</span>
+              </a>
+              <a className="social-link" href={profile.links.linkedin} target="_blank" rel="noreferrer">
+                <BrandIcon name="linkedin" /><span>LinkedIn</span>
+              </a>
+              <a className="social-link" href={profile.links.medium} target="_blank" rel="noreferrer">
+                <BrandIcon name="medium" /><span>Medium</span>
+              </a>
+              <a className="social-link" href={profile.links.leetcode} target="_blank" rel="noreferrer">
+                <BrandIcon name="leetcode" /><span>LeetCode</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -46,19 +57,6 @@ export function FrontPage() {
           </div>
         ))}
       </section>
-
-      <section className="working-section" aria-labelledby="working-title">
-        <div>
-          <p className="section-kicker">Current focus</p>
-          <h2 id="working-title">What I&apos;m working on</h2>
-        </div>
-        <ul className="focus-list">
-          {workingOn.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </section>
-
     </>
   );
 }

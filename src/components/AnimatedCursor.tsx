@@ -19,14 +19,20 @@ export function AnimatedCursor() {
       ringX += (event.clientX - ringX) * 0.18;
       ringY += (event.clientY - ringY) * 0.18;
     };
+    const setHoverState = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      ringRef.current?.classList.toggle("is-hovering", Boolean(target?.closest("a, button")));
+    };
     const animate = () => {
       if (ringRef.current) ringRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
       frame = requestAnimationFrame(animate);
     };
     window.addEventListener("mousemove", move, { passive: true });
+    window.addEventListener("mouseover", setHoverState, { passive: true });
     frame = requestAnimationFrame(animate);
     return () => {
       window.removeEventListener("mousemove", move);
+      window.removeEventListener("mouseover", setHoverState);
       cancelAnimationFrame(frame);
     };
   }, []);
