@@ -58,3 +58,17 @@
 - Browser smoke check at 375px confirmed the homepage title, 12 main sections, CV link, and research detail link.
 - Direct research detail navigation rendered Problem, Method, Results, and Limitations / Lessons.
 - Final `npm run build` passed.
+
+## 2026-10-01 — UI refinement
+
+### Added
+- Reworked Expert Technical Skills into five readable category cards with short explanations and individual technology tags, preserving only CV-listed skills.
+- Added lightweight fade-and-rise section entrance motion and card hover lift transitions.
+- Added an animated fine-pointer cursor with a responsive dot and trailing ring; it is disabled for touch pointers and prefers-reduced-motion users.
+
+### Removed
+- Removed the visible “CV section” label from every section heading.
+
+### Verification
+- `npm run build` passed with all static routes generated.
+- `npm run lint` passed.
