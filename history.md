@@ -48,3 +48,13 @@
 - Placeholder scan of generated `out/` passed.
 - Local checks returned HTTP 200 for homepage, one research page, one project page, robots, sitemap, and CV PDF.
 - Lighthouse was not run; no Lighthouse score is claimed.
+
+## 2026-10-01 — Final smoke check
+
+### Added
+- Added the documented `data-scroll-behavior="smooth"` attribute to the root HTML element to remove the Next.js route-transition warning.
+
+### Verification
+- Browser smoke check at 375px confirmed the homepage title, 12 main sections, CV link, and research detail link.
+- Direct research detail navigation rendered Problem, Method, Results, and Limitations / Lessons.
+- Final `npm run build` passed.
