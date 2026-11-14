@@ -91,12 +91,12 @@ export default function Navbar() {
             href="#home"
             title={personal.name}
             aria-label={`${personal.name} — back to top`}
-            className="brand"
+            className="brand min-w-0 max-w-[46vw] sm:max-w-none"
           >
             {personal.name}
           </a>
 
-          <nav className="hidden items-center gap-5 lg:flex xl:gap-7" aria-label="Sections">
+          <nav className="hidden min-w-0 items-center gap-5 xl:flex xl:gap-6" aria-label="Sections">
             {links.map((link) => (
               <a
                 key={link.id}
@@ -109,7 +109,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             <a
               href="/resume.pdf"
               target="_blank"
@@ -123,7 +123,7 @@ export default function Navbar() {
               onClick={() => setOpen((value) => !value)}
               aria-expanded={open}
               aria-label={open ? "Close menu" : "Open menu"}
-              className="flex h-9 w-9 items-center justify-center rounded-[3px] border border-[var(--line)] text-[var(--ink)] lg:hidden"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[3px] border border-[var(--line)] text-[var(--ink)] xl:hidden"
             >
               {open ? <X size={16} /> : <Menu size={16} />}
             </button>
@@ -137,7 +137,7 @@ export default function Navbar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: reduce ? 0.01 : 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden border-t lg:hidden"
+              className="overflow-hidden border-t xl:hidden"
               style={{ borderColor: "var(--line)", background: "var(--nav-bg)" }}
             >
               <nav className="wrap flex flex-col py-3" aria-label="Sections">
