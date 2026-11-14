@@ -485,10 +485,10 @@
   ],
   "internationalCompetitions": [
     {
-      "name": "Calico Fall 26",
-      "type": "Research Case Competition",
+      "name": "CALICO Fall '26",
+      "type": "Algorithmic Programming Competition",
       "period": "Fall 2026",
-      "description": "Interdisciplinary research case competition with a focus on AI applications in the life sciences."
+      "description": "Biannual international programming contest hosted by UC Berkeley students, where teams solve algorithmic problems across a range of difficulties in a timed round."
     },
     {
       "name": "International Computer Science Competition",
