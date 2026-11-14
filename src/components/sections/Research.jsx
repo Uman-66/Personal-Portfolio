@@ -1,17 +1,20 @@
 "use client";
-import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { ArrowUpRight, BookOpen } from "lucide-react";
 import SectionIntro from "@/components/SectionIntro";
 import FadeIn from "@/components/FadeIn";
+import CaseStudyModal from "@/components/CaseStudyModal";
 import data from "@/data/portfolio.json";
 
 export default function Research() {
   const { research } = data;
+  const [selected, setSelected] = useState(null);
 
   return (
     <section id="research" className="section">
       <div className="wrap">
         <SectionIntro
-          index="03"
           label="Studies"
           title="Benchmarks, audits and hard questions."
           description="Three independent studies: a clinical AI audit, a multi-site GNN benchmark, and a multimodal model tested under missing data."
@@ -22,8 +25,12 @@ export default function Research() {
           {research.map((item, index) => (
             <li key={item.title} className="border-b" style={{ borderColor: "var(--line)" }}>
               <FadeIn delay={index * 0.05}>
-                <div className="grid gap-4 py-8 md:grid-cols-[64px_1fr_240px] md:gap-8">
-                  <span className="font-mono text-[13px] text-[var(--ink)]">
+                <div className="study-row grid gap-4 py-8 md:grid-cols-[64px_1fr_240px] md:gap-8">
+                  <span
+                    aria-hidden="true"
+                    className="font-display text-[clamp(1.5rem,2vw,2rem)] italic leading-none"
+                    style={{ color: "var(--mark)" }}
+                  >
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -59,6 +66,15 @@ export default function Research() {
                           {tag}
                         </span>
                       ))}
+                      {item.caseStudy ? (
+                        <button
+                          type="button"
+                          onClick={() => setSelected(item)}
+                          className="link ml-1 flex cursor-pointer items-center gap-1 font-mono text-[12px] uppercase tracking-[0.14em]"
+                        >
+                          <BookOpen size={11} /> Case study
+                        </button>
+                      ) : null}
                       {item.link ? (
                         <a
                           href={item.link}
@@ -84,6 +100,12 @@ export default function Research() {
           ))}
         </ol>
       </div>
+
+      <AnimatePresence>
+        {selected ? (
+          <CaseStudyModal project={selected} onClose={() => setSelected(null)} />
+        ) : null}
+      </AnimatePresence>
     </section>
   );
 }

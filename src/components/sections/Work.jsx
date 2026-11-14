@@ -27,6 +27,11 @@ function ProjectMedia({ project, onOpen, openable }) {
       style={project.imageRatio ? { aspectRatio: project.imageRatio } : undefined}
     >
       <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+      {openable ? (
+        <span className="media-cue" aria-hidden="true">
+          Read case study <ArrowUpRight size={13} />
+        </span>
+      ) : null}
     </div>
   ) : (
     <div className="tile block w-full text-left">
@@ -51,7 +56,7 @@ function ProjectMedia({ project, onOpen, openable }) {
     <button
       type="button"
       onClick={onOpen}
-      className="block w-full"
+      className="block w-full cursor-pointer"
       aria-label={`Read the ${project.title} case study`}
     >
       {inner}

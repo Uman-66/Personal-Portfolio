@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Grainient from "@/components/Grainient/Grainient";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import data from "@/data/portfolio.json";
 
 const instrument = Instrument_Serif({
   subsets: ["latin"],
@@ -21,7 +21,10 @@ const onest = Onest({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
   title: {
     default: "Muhammad Rumman Aslam — ML Engineer & Researcher",
     template: "%s — Muhammad Rumman Aslam",
@@ -43,7 +46,7 @@ export const metadata = {
   ],
   robots: { index: true, follow: true },
   openGraph: {
-    type: "website",
+    type: "profile",
     locale: "en_US",
     siteName: "Muhammad Rumman Aslam",
     title: "Muhammad Rumman Aslam — ML Engineer & Researcher",
@@ -51,7 +54,7 @@ export const metadata = {
       "Trustworthy multimodal systems for healthcare: clinical AI auditing, robustness under missing data, and reproducible ML engineering.",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Muhammad Rumman Aslam — ML Engineer & Researcher",
     description:
       "Trustworthy multimodal systems for healthcare: clinical AI auditing, robustness under missing data, and reproducible ML engineering.",
@@ -63,6 +66,31 @@ export const viewport = {
   colorScheme: "dark",
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: data.personal.name,
+  jobTitle: data.personal.title,
+  email: `mailto:${data.personal.email}`,
+  description: data.personal.bio,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Faisalabad",
+    addressCountry: "PK",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: data.education.institution,
+  },
+  knowsAbout: data.personal.focus,
+  sameAs: [
+    data.personal.social.github,
+    data.personal.social.linkedin,
+    data.personal.social.medium,
+    data.personal.social.leetcode,
+  ].filter(Boolean),
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
@@ -71,6 +99,10 @@ export default function RootLayout({ children }) {
       className={`${instrument.variable} ${onest.variable}`}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         <div className="site-canvas" aria-hidden="true">
           <Grainient
             color1="#2b78c0"
@@ -99,7 +131,6 @@ export default function RootLayout({ children }) {
         </div>
         <div className="grain-layer" aria-hidden="true" />
         <div className="paper-grid" aria-hidden="true" />
-        <SmoothCursor />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

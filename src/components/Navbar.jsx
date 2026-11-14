@@ -5,14 +5,10 @@ import { Menu, X } from "lucide-react";
 import data from "@/data/portfolio.json";
 
 const links = [
-  { id: "about", label: "About" },
-  { id: "research", label: "Studies" },
   { id: "work", label: "Work" },
+  { id: "research", label: "Studies" },
   { id: "experience", label: "Experience" },
-  { id: "skills", label: "Skills" },
   { id: "achievements", label: "Awards" },
-  { id: "credentials", label: "Credentials" },
-  { id: "writing", label: "Writing" },
   { id: "contact", label: "Contact" },
 ];
 

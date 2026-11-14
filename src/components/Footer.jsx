@@ -3,6 +3,13 @@ import { FaGithub, FaLinkedinIn, FaMediumM } from "react-icons/fa";
 import { FileText } from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
 
+const moreLinks = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "credentials", label: "Credentials" },
+  { id: "writing", label: "Writing" },
+];
+
 export default function Footer() {
   const { personal } = data;
 
@@ -42,6 +49,24 @@ export default function Footer() {
             );
           })}
         </div>
+      </div>
+
+      <div
+        className="wrap flex flex-wrap items-center gap-x-6 gap-y-2 border-t py-4"
+        style={{ borderColor: "var(--line)" }}
+      >
+        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
+          Elsewhere
+        </span>
+        {moreLinks.map((link) => (
+          <a
+            key={link.id}
+            href={`#${link.id}`}
+            className="nav-link !text-[12px] !tracking-[0.14em]"
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
 
       <div className="wrap flex flex-col gap-2 border-t py-5 text-[12px] text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between" style={{ borderColor: "var(--line)" }}>

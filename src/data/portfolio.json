@@ -175,6 +175,20 @@
         "rs-fMRI",
         "ABIDE"
       ],
+      "caseStudy": {
+        "brief": "Does a graph neural network actually generalise better than classical ML on functional connectomes, or does site-level domain shift do the work? 848 subjects across 19 ABIDE I sites, one like-for-like benchmark.",
+        "approach": [
+          "Built functional connectome graphs from rs-fMRI time series for every subject in ABIDE I.",
+          "Trained five GNN architectures — GCN-ResNet, GATv2, ChebNet, BrainGNN and Population GCN — against three classical baselines.",
+          "Evaluated with 19-fold leave-one-site-out cross-validation so no site appeared in both training and test data.",
+          "Measured the drop under domain shift and on held-out sites instead of reporting pooled accuracy."
+        ],
+        "results": [
+          "A like-for-like comparison across 848 subjects and 19 sites, with every architecture trained and scored under the same protocol.",
+          "Leave-one-site-out numbers show how much pooled accuracy came from site-level regularities rather than disease signal.",
+          "Code and evaluation setup released on GitHub for reproduction."
+        ]
+      },
       "link": "https://github.com/Uman-66/GraphBRAIN-ABIDE"
     },
     {
@@ -219,6 +233,20 @@
         "Deterministic FIB-4 and APRI clinical calculators to prevent LLM hallucinations",
         "Safety-gated generative AI with red-flag triage engine for clinical emergencies"
       ],
+      "caseStudy": {
+        "brief": "A liver screening tool has to be useful in a clinic, not only accurate on a test set: take an ultrasound and a lab report, and return a risk assessment a patient can act on — without letting a language model invent a clinical number.",
+        "approach": [
+          "Trained a MobileNetV2 classifier on liver ultrasound scans to separate HCC from hemangioma, reaching 97% accuracy.",
+          "Extracted lab values from uploaded reports with OCR, then computed FIB-4 and APRI in deterministic code instead of asking a model to produce them.",
+          "Gated the generative assistant behind a red-flag triage engine, so an emergency surfaces as an explicit warning rather than conversational text.",
+          "Shipped the pipeline as a Flask service backed by PostgreSQL, with the model, calculators and assistant sharing one request path."
+        ],
+        "results": [
+          "97% classification accuracy on the ultrasound test split.",
+          "Clinical indices are reproducible because they are computed in code, not generated as prose.",
+          "When a lab value is missing, the report shows a gap instead of a confident hallucination."
+        ]
+      },
       "image": "/livora-ai.png",
       "imageRatio": 1.79
     },
@@ -338,6 +366,20 @@
         "AST safety gate blocks eval/exec/os.system and Big-O regressions before a patch can merge",
         "Sandbox test failures trigger automatic repair from parsed tracebacks, up to five attempts"
       ],
+      "caseStudy": {
+        "brief": "A polyglot legacy repository with known vulnerabilities: find them across languages, patch them, and prove the patch does not break the build — with no human in the loop until the change is verified.",
+        "approach": [
+          "Wrote an AST taint-flow auditor that traces untrusted input to dangerous sinks across languages.",
+          "Cross-referenced findings against CVE advisories through a FAISS retrieval layer.",
+          "Gated every generated patch behind a structural safety check that blocks eval, exec, os.system and Big-O regressions before the patch can merge.",
+          "Ran a three-agent approval debate, executed the patch in an isolated Docker sandbox, and repaired from parsed tracebacks up to five attempts."
+        ],
+        "results": [
+          "Auditor benchmark: precision 0.909, recall 1.000, F1 0.952 — zero false negatives on the benchmark set.",
+          "28 of 28 sandbox tests passed on the released patch set.",
+          "Every change keeps an audit trail: finding, CVE reference, patch, safety verdict and test run."
+        ]
+      },
       "image": "/ibmbob.jpg",
       "imageRatio": 1.87
     }

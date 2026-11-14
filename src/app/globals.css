@@ -106,6 +106,20 @@ img {
   border-radius: 2px;
 }
 
+/* Interactive media gets an inset ring so the card border stays visible */
+.figure:focus-visible,
+.tile:focus-visible {
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-cue,
+  .figure img,
+  .tile {
+    transition: none;
+  }
+}
+
 section[id] {
   scroll-margin-top: 5.5rem;
 }
