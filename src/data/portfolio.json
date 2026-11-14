@@ -1,0 +1,453 @@
+{
+  "personal": {
+    "name": "Muhammad Rumman Aslam",
+    "firstName": "Rumman",
+    "title": "ML Engineer & Researcher",
+    "tagline": "I build trustworthy multimodal systems for healthcare — the kind that keep working when a scan is missing, a site shifts, or a metric lies.",
+    "email": "rummanaslam01@gmail.com",
+    "location": "Faisalabad, Pakistan",
+    "bio": "I'm a Software Engineering student at the University of Agriculture, Faisalabad, specializing in machine learning engineering, medical AI, and multimodal learning. I build robust, explainable AI systems — with a focus on healthcare applications where reliability isn't optional, it's critical. My work spans from deep learning pipelines processing millions of records to clinical AI auditing frameworks that catch what standard metrics miss.",
+    "availability": "Open to research internships and ML engineering roles",
+    "focus": [
+      "Multimodal learning",
+      "Medical imaging",
+      "Clinical AI auditing",
+      "Robustness & calibration"
+    ],
+    "social": {
+      "github": "https://github.com/Uman-66",
+      "linkedin": "https://www.linkedin.com/in/uman-aslam2110/",
+      "leetcode": "https://leetcode.com/u/M-Rumman/",
+      "medium": "https://medium.com/@rummanaslam01",
+      "email": "mailto:rummanaslam01@gmail.com"
+    },
+    "stats": [
+      {
+        "label": "GPA",
+        "value": "3.69",
+        "suffix": "/4.0"
+      },
+      {
+        "label": "Records Processed",
+        "value": "78",
+        "suffix": "M+"
+      },
+      {
+        "label": "LeetCode Problems",
+        "value": "150",
+        "suffix": "+"
+      },
+      {
+        "label": "Projects Built",
+        "value": "8",
+        "suffix": "+"
+      }
+    ],
+    "resumeUrl": "/resume.pdf"
+  },
+  "education": {
+    "degree": "BS Software Engineering",
+    "institution": "University of Agriculture, Faisalabad",
+    "period": "2024 – 2028",
+    "detail": "Ranked 1st in batch · recent semester GPA 4.00 / 4.00 · fully funded merit scholarship"
+  },
+  "skills": [
+    {
+      "category": "Deep Learning & AI",
+      "items": [
+        "PyTorch",
+        "TensorFlow",
+        "CNNs",
+        "Vision Transformers",
+        "GNNs",
+        "LLMs",
+        "Multimodal Late Fusion"
+      ]
+    },
+    {
+      "category": "Medical AI & CV",
+      "items": [
+        "MRI Analysis",
+        "Ultrasound Imaging",
+        "Histopathology",
+        "Explainable AI (XAI)",
+        "Model Robustness",
+        "Missing-Modality Training",
+        "Image Segmentation"
+      ]
+    },
+    {
+      "category": "Data & Programming",
+      "items": [
+        "Python",
+        "C++",
+        "SQL",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "OpenCV"
+      ]
+    },
+    {
+      "category": "MLOps & Infrastructure",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "FastAPI",
+        "W&B",
+        "MLflow",
+        "PostgreSQL",
+        "Git/GitHub"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "FlyRank",
+      "role": "ML Engineering Intern",
+      "period": "Jun – Sep 2026",
+      "location": "Remote — Chicago, IL, USA",
+      "description": "Designed and managed the complete lifecycle of reproducible ML workflows within an international team, supporting agentic content generation and Answer Engine Optimization systems.",
+      "highlights": [
+        "Processed 78M+ performance records and extracted 9 temporal features using 7-observation rolling/lag windows",
+        "Trained and compared Logistic Regression and Random Forest classifiers against a rule-based baseline using Precision@50 and temporal validation",
+        "Built an end-to-end content prioritization pipeline scoring 25K client-content pairs with explainable review queues"
+      ],
+      "tech": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "Feature Engineering",
+        "MLOps"
+      ]
+    },
+    {
+      "company": "MolCurator (open source)",
+      "role": "Contributor — ML Training & Validation",
+      "period": "Oct 2026",
+      "location": "Remote — collaborative research project",
+      "description": "Contributed to an open-source AI agent that curates molecular benchmark datasets, under the project's original author.",
+      "highlights": [
+        "Worked on the ML training and validation layers of a LangGraph agent that screens candidate molecules with ML, then confirms them with xTB/ORCA quantum chemistry",
+        "Kept the shared training interface and agent tool schemas unchanged while extending training and validation experiments"
+      ],
+      "tech": [
+        "Python",
+        "LangGraph",
+        "ChemProp",
+        "CatBoost",
+        "RDKit"
+      ]
+    }
+  ],
+  "research": [
+    {
+      "title": "TrustClinAI: Evaluating the Trustworthiness of Clinical AI",
+      "institution": "University of Agriculture, Faisalabad",
+      "metric": "XGBoost · SHAP · calibration",
+      "description": "Designed a multidimensional auditing protocol evaluating clinical risk predictors across predictive performance, calibration, explainability, and data robustness axes.",
+      "notes": [
+        "Audited predictors across performance, calibration, explainability and robustness rather than accuracy alone.",
+        "SHAP attribution isolated clinically costly false negatives — the failure mode a single accuracy metric hides."
+      ],
+      "tags": [
+        "XGBoost",
+        "SHAP",
+        "Calibration",
+        "Robustness Testing",
+        "Clinical AI"
+      ]
+    },
+    {
+      "title": "GraphBRAIN-ABIDE",
+      "institution": "Independent research · ABIDE I",
+      "metric": "848 subjects · 19 sites · 5 GNN architectures",
+      "description": "Benchmark comparing 3 classical ML models against 5 GNN architectures modeling functional brain connectomes from rs-fMRI data across 848 subjects and 19 sites.",
+      "notes": [
+        "5 GNN architectures: GCN-ResNet, GATv2, ChebNet, BrainGNN, Population GCN",
+        "19-fold Leave-One-Site-Out cross-validation across 848 subjects",
+        "Analysis of domain shift and out-of-distribution generalization"
+      ],
+      "tags": [
+        "GCN",
+        "GATv2",
+        "ChebNet",
+        "rs-fMRI",
+        "ABIDE"
+      ],
+      "link": "https://github.com/Uman-66/GraphBRAIN-ABIDE"
+    },
+    {
+      "title": "Robust Multimodal Learning",
+      "institution": "Independent research · OASIS",
+      "metric": "73.8% test accuracy · 436 subjects · 5-fold CV",
+      "description": "PyTorch late-fusion architecture for cognitive impairment classification from the OASIS dataset, integrating 3D CNN for MRI volumes with clinical MLP and random modality dropout training.",
+      "notes": [
+        "436 subjects from OASIS dataset with 3D CNN + clinical MLP late fusion",
+        "Random modality dropout for graceful degradation under missing data",
+        "5-fold cross-validation achieving stable 73.8% test accuracy"
+      ],
+      "tags": [
+        "PyTorch",
+        "3D CNN",
+        "Multimodal Fusion",
+        "OASIS Dataset"
+      ],
+      "link": "https://github.com/Uman-66/Robust-Multimodal-Learning-for-Neurological-Disease-Prediction-Under-Missing-Modalities"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Livora AI",
+      "subtitle": "Liver Health Screening Platform",
+      "metric": "97% ultrasound accuracy · OCR reports · deterministic lab scoring",
+      "description": "Multimodal diagnostic platform integrating MobileNetV2 CNN with 97% accuracy, OCR-based lab report extraction, deterministic clinical calculators, and a safety-gated AI assistant.",
+      "tags": [
+        "TensorFlow",
+        "Flask",
+        "PostgreSQL",
+        "Fireworks AI",
+        "OCR"
+      ],
+      "links": {
+        "github": "https://github.com/Uman-66/Livora-Ai",
+        "submission": "https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-ii/error-handlers/livora-ai"
+      },
+      "featured": true,
+      "highlights": [
+        "97% accuracy classifying liver ultrasound scans (HCC, Hemangioma)",
+        "Deterministic FIB-4 and APRI clinical calculators to prevent LLM hallucinations",
+        "Safety-gated generative AI with red-flag triage engine for clinical emergencies"
+      ],
+      "image": "/livora-ai.png",
+      "imageRatio": 1.79
+    },
+    {
+      "title": "LeafSense AI",
+      "subtitle": "Reproducible Deep Learning Plant Agent",
+      "metric": "96.7% accuracy · 38 classes · confidence-gated",
+      "description": "Agentic workflow combining MobileNetV2 with 96.7% accuracy across 38 classes and GPT-4o-mini for context-aware treatment generation.",
+      "tags": [
+        "MobileNetV2",
+        "GPT-4o-mini",
+        "W&B",
+        "Streamlit"
+      ],
+      "links": {
+        "github": "https://github.com/Uman-66/Plant-Disease-Detector",
+        "live": "https://plant-disease-detector-rumman.streamlit.app/"
+      },
+      "featured": false,
+      "highlights": [
+        "96.7% accuracy across 38 plant disease classes",
+        "Confidence threshold rejection gate to prevent hallucinations",
+        "Automated PDF report generation with ReportLab"
+      ],
+      "image": "/leafsense.png",
+      "imageRatio": 1.77
+    },
+    {
+      "title": "The Negotiator",
+      "subtitle": "Multi-Agent Autonomous Voice System",
+      "metric": "Multi-agent voice pipeline · deterministic audit engine",
+      "description": "Modular full-stack multi-agent platform with GPT-4o Vision and ElevenLabs conversational agents, featuring a deterministic red-flag auditing engine.",
+      "tags": [
+        "Next.js",
+        "FastAPI",
+        "Supabase",
+        "GPT-4o",
+        "ElevenLabs"
+      ],
+      "links": {
+        "github": "https://github.com/Uman-66/Negotiaoter"
+      },
+      "featured": false,
+      "highlights": [
+        "Multi-agent platform with Next.js, FastAPI, and Supabase",
+        "Red-flag engine detecting pricing inconsistencies and manipulation",
+        "GPT-4o Vision + ElevenLabs voice integration"
+      ],
+      "image": "/negotiator.png",
+      "imageRatio": 1.23
+    },
+    {
+      "title": "MolCurator",
+      "subtitle": "Open-source contributor · ML training & validation",
+      "metric": "Multi-level properties · ML screening → xTB/ORCA confirmation",
+      "description": "Open-source AI agent that builds property-specific molecular benchmark sets. Given a seed molecule and a target window, it generates candidates, screens them with ML, confirms the best with xTB/ORCA quantum chemistry, and curates a dataset with properties at several levels of theory. I contributed to the ML training and validation layers; the project is authored and led by Varun Rishi.",
+      "tags": [
+        "LangGraph",
+        "ChemProp",
+        "CatBoost",
+        "RDKit",
+        "xTB",
+        "ORCA"
+      ],
+      "links": {
+        "github": "https://github.com/varunrishi/molcurator"
+      },
+      "featured": false,
+      "highlights": [
+        "Contributor to the ML training and validation layers of a multi-tool LangGraph agent",
+        "Agent loop: GENERATE → PREDICT/SCREEN → TRAIN → VALIDATE (QM) → CURATE, with rule fallbacks behind every LLM decision",
+        "Curated runs store SMILES, XYZ geometry and ML/xTB/QM values for every molecule, with provenance and resumable checkpoints"
+      ],
+      "image": "/molcurator.png",
+      "imageRatio": 1.79
+    },
+    {
+      "title": "WarrantyVault",
+      "subtitle": "AI-Powered Warranty Tracker",
+      "metric": "receipt vision parsing · .ics expiry reminders",
+      "description": "Upload a receipt photo or PDF and a Fireworks vision model extracts the store, purchase date, currency and per-product warranty terms into warranty cards, each exportable as a calendar file so the expiry surfaces before the appliance breaks.",
+      "tags": [
+        "React 18",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS 4",
+        "Supabase Edge Functions",
+        "Fireworks AI"
+      ],
+      "links": {},
+      "featured": false,
+      "highlights": [
+        "Vision model extracts store, date, currency and per-product warranty duration with confidence levels",
+        "Any warranty card exports as an .ics file so a calendar reminds you before expiry",
+        "Deno edge functions handle parsing; Playwright covers the end-to-end flows"
+      ],
+      "image": "/warranty-vault.png",
+      "imageRatio": 1.81
+    },
+    {
+      "title": "IBM Bob 2.0",
+      "subtitle": "Autonomous Legacy & Security Modernizer",
+      "metric": "Precision 0.909 · Recall 1.000 · 28/28 tests",
+      "description": "Multi-agent platform that points at a polyglot repository, finds vulnerabilities through AST taint-flow analysis, cross-references CVE advisories via RAG, writes patches, gates them behind a structural safety check and a three-agent approval debate, then executes them in an isolated Docker sandbox with automatic repair.",
+      "tags": [
+        "FastAPI",
+        "React 19",
+        "PostgreSQL",
+        "FAISS",
+        "Docker",
+        "Prometheus"
+      ],
+      "links": {},
+      "featured": false,
+      "highlights": [
+        "Auditor benchmark: precision 0.909, recall 1.000 with zero false negatives, F1 0.952",
+        "AST safety gate blocks eval/exec/os.system and Big-O regressions before a patch can merge",
+        "Sandbox test failures trigger automatic repair from parsed tracebacks, up to five attempts"
+      ],
+      "image": "/ibmbob.jpg",
+      "imageRatio": 1.87
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Machine Learning Specialization",
+      "issuer": "DeepLearning.AI",
+      "link": "https://coursera.org/share/c1f44227631e46b5a5a5a1de603ebdab"
+    },
+    {
+      "name": "Deep Learning Specialization",
+      "issuer": "DeepLearning.AI / Stanford",
+      "link": "https://coursera.org/share/f8d020688b97e76ffdb9318d309f2e6f"
+    },
+    {
+      "name": "Mathematics for ML & Data Science",
+      "issuer": "DeepLearning.AI",
+      "link": "https://coursera.org/share/9a6f11dd6688ee0dc84a824ec9b8cb73"
+    },
+    {
+      "name": "Natural Language Processing Specialization",
+      "issuer": "DeepLearning.AI"
+    },
+    {
+      "name": "TensorFlow: Advanced Techniques",
+      "issuer": "DeepLearning.AI",
+      "link": "https://coursera.org/share/9da6ba1b879c8531c88f1d95191f36fd"
+    },
+    {
+      "name": "MLOps Specialization",
+      "issuer": "Duke University",
+      "link": "https://coursera.org/share/da29dd3bb5727358e9d81079f25788a8"
+    },
+    {
+      "name": "TensorFlow Developer Certificate",
+      "issuer": "TensorFlow"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Fully Funded Merit Scholarship",
+      "description": "Awarded a fully funded, merit-based bachelor's scholarship for academic performance.",
+      "meta": "University of Agriculture, Faisalabad",
+      "year": "2024"
+    },
+    {
+      "title": "Punjab Chief Minister's Merit Laptop",
+      "description": "Provincial merit award recognising sustained academic achievement.",
+      "meta": "Government of Punjab",
+      "year": "2025"
+    },
+    {
+      "title": "Extraordinary Code Submission Award",
+      "description": "Recognised for an outstanding submission in Round 1 of the International Computer Science Competition (ICSC).",
+      "meta": "ICSC",
+      "year": "2024"
+    },
+    {
+      "title": "150+ LeetCode Problems Solved",
+      "description": "Algorithmic practice across arrays, graphs, dynamic programming and trees.",
+      "meta": "LeetCode",
+      "year": "Ongoing",
+      "link": "https://leetcode.com/u/M-Rumman/"
+    },
+    {
+      "title": "Global Technical Leadership",
+      "description": "Led an international engineering team, including collaborators from MIT and Munich, to ship a working prototype in a 24-hour sprint.",
+      "meta": "HackNation",
+      "year": "2024"
+    }
+  ],
+  "writing": [
+    {
+      "title": "Long-form reflections on model audit challenges, calibration gaps, and lessons learned from dataset limitations.",
+      "outlet": "Medium",
+      "link": "https://medium.com/@rummanaslam01/towards-clinical-trustworthiness-diagnosing-confounds-and-data-leakage-in-multimodal-mri-models-f1375b996928"
+    }
+  ],
+  "voluntaryRoles": [
+    {
+      "title": "Lead Machine Learning Instructor",
+      "institution": "iCodeGuru",
+      "period": "Sep 2026",
+      "description": "Led a 5-member instructional team teaching an intensive month-long ML course to 20+ students.",
+      "tech": [
+        "TensorFlow",
+        "PyTorch",
+        "Scikit-Learn",
+        "Teaching"
+      ]
+    },
+    {
+      "title": "Section Leader",
+      "institution": "Code in Place — Stanford University",
+      "description": "Selected as a section leader for Stanford University's Code in Place, guiding a small section of learners through Python fundamentals and supporting them through weekly code exercises.",
+      "tech": [
+        "Python",
+        "Teaching",
+        "Code Review"
+      ]
+    }
+  ],
+  "internationalCompetitions": [
+    {
+      "name": "International Computer Science Competition",
+      "type": "Algorithmic Competition",
+      "period": "2024 – 2025",
+      "description": "Global competitive programming contest qualifying through regional rounds, testing algorithms, data structures, and problem-solving under time constraints.",
+      "award": "Pre-final round"
+    }
+  ]
+}

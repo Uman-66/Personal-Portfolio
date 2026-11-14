@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument), Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/*
+  Lab Notebook — single dark theme.
+  Deep navy ground (hue 205), off-white ink, cyan accent, frosted glass, grain.
+  Measured against --paper #0b1620: ink 16.34:1, muted 10.42:1, accent 9.93:1.
+  Ink is off-white rather than #fff to avoid halation on dark surfaces; the
+  accent stays brighter than muted text so labels read as accent, not body.
+*/
+:root {
+  color-scheme: dark;
+
+  --paper: #0b1620;
+  --paper-2: #0f1c28;
+  --ink: #eef3f6;
+  --muted: #aebdc8;
+  --line: rgba(196, 224, 240, 0.14);
+  --line-strong: rgba(196, 224, 240, 0.32);
+  --accent: #7fc9e8;
+  --mark: var(--accent);
+  --mark-ink: #06121a;
+  --mark-soft: rgba(127, 201, 232, 0.16);
+  --grid: rgba(196, 224, 240, 0.032);
+  --overlay: rgba(2, 7, 12, 0.68);
+  --nav-bg: rgba(10, 20, 29, 0.62);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 24px 50px -32px rgba(0, 0, 0, 0.9);
+
+  /* Glass */
+  --glass-bg: rgba(13, 28, 41, 0.48);
+  --glass-bg-strong: rgba(13, 28, 41, 0.84);
+  --glass-border: rgba(190, 224, 240, 0.16);
+  --glass-edge: rgba(190, 224, 240, 0.24);
+  --glass-shadow: 0 24px 60px -32px rgba(0, 0, 0, 0.95), 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+  --glass-blur: 20px;
+
+  /* Film grain */
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+  --noise-size: 160px;
+  --noise-blend: overlay;
+  --canvas-opacity: 0.6;
+  --grain-opacity: 0.3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--mark);
+  color: var(--mark-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 300;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  background: var(--mark);
+  color: var(--mark-ink);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+/* Graph-paper layer */
+.paper-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(130% 85% at 50% 0%, #000 15%, transparent 80%);
+  -webkit-mask-image: radial-gradient(130% 85% at 50% 0%, #000 15%, transparent 80%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border: 3px solid var(--paper);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mark);
+}
