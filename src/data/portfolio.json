@@ -443,6 +443,12 @@
   ],
   "internationalCompetitions": [
     {
+      "name": "Calico Fall 26",
+      "type": "Research Case Competition",
+      "period": "Fall 2026",
+      "description": "Interdisciplinary research case competition with a focus on AI applications in the life sciences."
+    },
+    {
       "name": "International Computer Science Competition",
       "type": "Algorithmic Competition",
       "period": "2024 – 2025",
