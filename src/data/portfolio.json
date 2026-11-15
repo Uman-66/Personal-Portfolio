@@ -120,24 +120,6 @@
         "Feature Engineering",
         "MLOps"
       ]
-    },
-    {
-      "company": "MolCurator (open source)",
-      "role": "Contributor — ML Training & Validation",
-      "period": "Oct 2026",
-      "location": "Remote — collaborative research project",
-      "description": "Contributed to an open-source AI agent that curates molecular benchmark datasets, under the project's original author.",
-      "highlights": [
-        "Worked on the ML training and validation layers of a LangGraph agent that screens candidate molecules with ML, then confirms them with xTB/ORCA quantum chemistry",
-        "Kept the shared training interface and agent tool schemas unchanged while extending training and validation experiments"
-      ],
-      "tech": [
-        "Python",
-        "LangGraph",
-        "ChemProp",
-        "CatBoost",
-        "RDKit"
-      ]
     }
   ],
   "research": [
