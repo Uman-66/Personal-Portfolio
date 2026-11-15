@@ -28,11 +28,6 @@
         "suffix": "/4.0"
       },
       {
-        "label": "Records Processed",
-        "value": "78",
-        "suffix": "M+"
-      },
-      {
         "label": "LeetCode Problems",
         "value": "150",
         "suffix": "+"
@@ -109,7 +104,7 @@
       "location": "Remote — Chicago, IL, USA",
       "description": "Designed and managed the complete lifecycle of reproducible ML workflows within an international team, supporting agentic content generation and Answer Engine Optimization systems.",
       "highlights": [
-        "Processed 78M+ performance records and extracted 9 temporal features using 7-observation rolling/lag windows",
+        "Extracted 9 temporal features from performance records with 7-observation rolling/lag windows",
         "Trained and compared Logistic Regression and Random Forest classifiers against a rule-based baseline using Precision@50 and temporal validation",
         "Built an end-to-end content prioritization pipeline scoring 25K client-content pairs with explainable review queues"
       ],
