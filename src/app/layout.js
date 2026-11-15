@@ -46,6 +46,7 @@ export const metadata = {
     "missing modalities",
   ],
   robots: { index: true, follow: true },
+  ...(siteUrl ? { alternates: { canonical: "/" } } : {}),
   openGraph: {
     type: "profile",
     locale: "en_US",
@@ -65,6 +66,24 @@ export const metadata = {
 export const viewport = {
   themeColor: "#0b1620",
   colorScheme: "dark",
+};
+
+const projectsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${data.personal.name} — selected work`,
+  itemListElement: data.projects.map((project, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "SoftwareSourceCode",
+      name: project.title,
+      description: project.description,
+      codeRepository: project.links?.github,
+      programmingLanguage: project.tags?.[0],
+      author: { "@type": "Person", name: data.personal.name },
+    },
+  })),
 };
 
 const personSchema = {
@@ -103,6 +122,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsSchema) }}
         />
         <div className="site-canvas" aria-hidden="true">
           <Grainient

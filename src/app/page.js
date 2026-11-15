@@ -8,7 +8,6 @@ import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
 import Credentials from "@/components/sections/Credentials";
 import InternationalCompetition from "@/components/sections/InternationalCompetition";
-import Writing from "@/components/sections/Writing";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
       <Experience />
       <VoluntaryRoles />
       <Skills />
-      <Writing />
       <Achievements />
       <Credentials />
       <Contact />

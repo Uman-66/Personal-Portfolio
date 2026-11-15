@@ -10,11 +10,10 @@ export default function Experience() {
     <section id="experience" className="section">
       <div className="wrap">
         <SectionIntro
-          index="04"
           label="Experience"
           title="Shipped work, not just notebooks."
           description="Research is half the job; the other half is getting a pipeline to run reproducibly for someone else."
-          meta="2026 — present"
+          meta="2026"
         />
 
         <ol className="border-t" style={{ borderColor: "var(--line)" }}>

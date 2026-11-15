@@ -11,7 +11,6 @@ export default function About() {
     <section id="about" className="section">
       <div className="wrap">
         <SectionIntro
-          index="01"
           label="Profile"
           title="Reliability first, then accuracy."
           description="ML Engineer specializing in trustworthy multimodal systems for healthcare — clinical AI auditing, robustness under missing data, and LLM/NLP systems."
@@ -87,7 +86,7 @@ export default function About() {
               <span className="flex-1" />
             </div>
 
-            <dl className="grid grid-cols-2 gap-x-8 gap-y-8 pt-6 md:grid-cols-4">
+            <dl className="grid max-w-xl grid-cols-2 gap-x-12 gap-y-8 pt-6">
               {personal.stats.map((stat) => (
                 <div key={stat.label}>
                   <dd className="font-display text-[clamp(2.5rem,4vw,3.25rem)] leading-none tracking-tight text-[var(--ink)]">

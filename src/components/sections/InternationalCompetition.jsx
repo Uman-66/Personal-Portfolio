@@ -10,7 +10,6 @@ export default function InternationalCompetition() {
     <section id="international-competition" className="section">
       <div className="wrap">
         <SectionIntro
-          index="08"
           label="International Competition"
           title="Global recognition beyond the lab."
           description="Competitive programming that tested algorithmic depth and problem-solving under time constraints."

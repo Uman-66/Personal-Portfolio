@@ -33,11 +33,6 @@
         "label": "LeetCode Problems",
         "value": "150",
         "suffix": "+"
-      },
-      {
-        "label": "Projects Built",
-        "value": "8",
-        "suffix": "+"
       }
     ],
     "resumeUrl": "/resume.pdf"
@@ -225,6 +220,7 @@
       "title": "Livora AI",
       "subtitle": "Liver Health Screening Platform",
       "metric": "97% ultrasound accuracy · OCR reports · deterministic lab scoring",
+      "impact": "A missing lab value surfaces as a gap, not a fabricated score — the failure mode that matters when the output reaches a patient.",
       "description": "Multimodal diagnostic platform integrating MobileNetV2 CNN with 97% accuracy, OCR-based lab report extraction, deterministic clinical calculators, and a safety-gated AI assistant.",
       "tags": [
         "TensorFlow",
@@ -264,6 +260,7 @@
       "title": "LeafSense AI",
       "subtitle": "Reproducible Deep Learning Plant Agent",
       "metric": "96.7% accuracy · 38 classes · confidence-gated",
+      "impact": "Confidence gating lets the agent say it is unsure instead of naming a disease with false certainty.",
       "description": "Agentic workflow combining MobileNetV2 with 96.7% accuracy across 38 classes and GPT-4o-mini for context-aware treatment generation.",
       "tags": [
         "MobileNetV2",
@@ -288,6 +285,7 @@
       "title": "The Negotiator",
       "subtitle": "Multi-Agent Autonomous Voice System",
       "metric": "Multi-agent voice pipeline · deterministic audit engine",
+      "impact": "The audit verdict comes from deterministic rules, so a pricing contradiction is flagged the same way every run.",
       "description": "Modular full-stack multi-agent platform with GPT-4o Vision and ElevenLabs conversational agents, featuring a deterministic red-flag auditing engine.",
       "tags": [
         "Next.js",
@@ -312,6 +310,7 @@
       "title": "MolCurator",
       "subtitle": "Open-source contributor · ML training & validation",
       "metric": "Multi-level properties · ML screening → xTB/ORCA confirmation",
+      "impact": "Every curated molecule keeps provenance across ML, xTB and QM values, so a dataset can be audited months after the run.",
       "description": "Open-source AI agent that builds property-specific molecular benchmark sets. Given a seed molecule and a target window, it generates candidates, screens them with ML, confirms the best with xTB/ORCA quantum chemistry, and curates a dataset with properties at several levels of theory. I contributed to the ML training and validation layers; the project is authored and led by Varun Rishi.",
       "tags": [
         "LangGraph",
@@ -337,6 +336,7 @@
       "title": "WarrantyVault",
       "subtitle": "AI-Powered Warranty Tracker",
       "metric": "receipt vision parsing · .ics expiry reminders",
+      "impact": "Warranties stop expiring unnoticed because the reminder lands in the calendar the user already checks.",
       "description": "Upload a receipt photo or PDF and a Fireworks vision model extracts the store, purchase date, currency and per-product warranty terms into warranty cards, each exportable as a calendar file so the expiry surfaces before the appliance breaks.",
       "tags": [
         "React 18",
@@ -360,6 +360,7 @@
       "title": "IBM Bob 2.0",
       "subtitle": "Autonomous Legacy & Security Modernizer",
       "metric": "Precision 0.909 · Recall 1.000 · 28/28 tests",
+      "impact": "Zero false negatives on the auditor benchmark means no planted vulnerability slipped past the gate.",
       "description": "Multi-agent platform that points at a polyglot repository, finds vulnerabilities through AST taint-flow analysis, cross-references CVE advisories via RAG, writes patches, gates them behind a structural safety check and a three-agent approval debate, then executes them in an isolated Docker sandbox with automatic repair.",
       "tags": [
         "FastAPI",

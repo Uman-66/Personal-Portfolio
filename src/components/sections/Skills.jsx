@@ -10,7 +10,6 @@ export default function Skills() {
     <section id="skills" className="section">
       <div className="wrap">
         <SectionIntro
-          index="05"
           label="Skills"
           title="The stack behind the work."
           description="No proficiency bars — just the tools that actually appear in the projects and repositories above."

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { FaGithub, FaMediumM } from "react-icons/fa";
@@ -26,7 +27,13 @@ function ProjectMedia({ project, onOpen, openable }) {
       className="figure block w-full"
       style={project.imageRatio ? { aspectRatio: project.imageRatio } : undefined}
     >
-      <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+      <Image
+        src={project.image}
+        alt={`${project.title} preview`}
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        style={{ objectFit: "cover" }}
+      />
       {openable ? (
         <span className="media-cue" aria-hidden="true">
           Read case study <ArrowUpRight size={13} />
@@ -123,7 +130,6 @@ export default function Work() {
     <section id="work" className="section">
       <div className="wrap">
         <SectionIntro
-          index="02"
           label="Selected work"
           title="Systems I built, and what they had to survive."
           description="Each project below, in the order I would talk about it: the problem, the constraint that made it hard, and what the numbers actually say."
@@ -169,6 +175,15 @@ export default function Work() {
                     <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--muted)]">
                       {project.description}
                     </p>
+
+                    {project.impact ? (
+                      <p
+                        className="mt-4 max-w-xl border-l-2 pl-3 text-[14px] leading-relaxed text-[var(--ink)]"
+                        style={{ borderColor: "var(--mark)" }}
+                      >
+                        {project.impact}
+                      </p>
+                    ) : null}
 
                     {project.highlights?.length ? (
                       <ul className="mt-4 space-y-1.5">

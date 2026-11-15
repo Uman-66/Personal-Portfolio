@@ -11,7 +11,6 @@ export default function Credentials() {
     <section id="credentials" className="section">
       <div className="wrap">
         <SectionIntro
-          index="07"
           label="Credentials"
           title="Coursework and specialisations."
           description="The structured study behind the fundamentals — machine learning, deep learning, mathematics for ML, natural language processing, TensorFlow and production ML systems."
