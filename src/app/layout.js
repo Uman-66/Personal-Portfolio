@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Grainient from "@/components/Grainient/Grainient";
+import CursorHalo from "@/components/CursorHalo";
 import data from "@/data/portfolio.json";
 
 const instrument = Instrument_Serif({
@@ -108,20 +109,20 @@ export default function RootLayout({ children }) {
             color1="#2b78c0"
             color2="#071024"
             color3="#5a8fcf"
-            timeSpeed={0.55}
+            timeSpeed={0.24}
             colorBalance={-0.05}
-            warpStrength={1.15}
-            warpFrequency={1.85}
-            warpSpeed={0.9}
-            warpAmplitude={94}
+            warpStrength={1}
+            warpFrequency={2.7}
+            warpSpeed={0.5}
+            warpAmplitude={58}
             blendAngle={0}
-            blendSoftness={0.3}
+            blendSoftness={0.22}
             rotationAmount={300}
-            noiseScale={1.6}
-            grainAmount={0.11}
+            noiseScale={2.1}
+            grainAmount={0.07}
             grainScale={2}
             grainAnimated={false}
-            contrast={1.25}
+            contrast={1.12}
             gamma={1}
             saturation={0.9}
             centerX={0}
@@ -131,6 +132,7 @@ export default function RootLayout({ children }) {
         </div>
         <div className="grain-layer" aria-hidden="true" />
         <div className="paper-grid" aria-hidden="true" />
+        <CursorHalo />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

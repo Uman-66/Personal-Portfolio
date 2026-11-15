@@ -19,7 +19,7 @@ export default function SectionIntro({ label, title, description, meta }) {
 
   return (
     <FadeIn>
-      <div className="mb-10 md:mb-14">
+      <div className="mb-7 md:mb-10">
         <div className="flex items-center gap-4 border-b border-[var(--line)] pb-3">
           <span
             className={`eyebrow${label === "Profile" ? " eyebrow-strong" : ""}`}
