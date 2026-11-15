@@ -6,6 +6,7 @@ import { SiLeetcode } from "react-icons/si";
 const moreLinks = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "voluntary", label: "Teaching" },
   { id: "credentials", label: "Credentials" },
   { id: "writing", label: "Writing" },
 ];

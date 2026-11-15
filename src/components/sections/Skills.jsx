@@ -13,11 +13,11 @@ export default function Skills() {
           index="05"
           label="Skills"
           title="The stack behind the work."
-          description="No proficiency bars — just the tools that actually appear in the repositories above."
+          description="No proficiency bars — just the tools that actually appear in the projects and repositories above."
           meta="By category"
         />
 
-        <div className="grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {skills.map((group, index) => (
             <FadeIn key={group.category} delay={index * 0.05}>
               <div>

@@ -6,13 +6,15 @@
     "tagline": "I build trustworthy multimodal systems for healthcare — the kind that keep working when a scan is missing, a site shifts, or a metric lies.",
     "email": "rummanaslam01@gmail.com",
     "location": "Faisalabad, Pakistan",
-    "bio": "I'm a Software Engineering student at the University of Agriculture, Faisalabad, specializing in machine learning engineering, medical AI, and multimodal learning. I build robust, explainable AI systems — with a focus on healthcare applications where reliability isn't optional, it's critical. My work spans from deep learning pipelines processing millions of records to clinical AI auditing frameworks that catch what standard metrics miss.",
+    "bio": "I'm a Software Engineering student at the University of Agriculture, Faisalabad, specializing in machine learning engineering, medical AI, and multimodal learning. I build robust, explainable AI systems — with a focus on healthcare applications where reliability isn't optional, it's critical. My work spans from deep learning pipelines to clinical AI auditing frameworks that catch what standard metrics miss. Alongside imaging, I build LLM and NLP systems: retrieval-grounded assistants, multi-agent pipelines with explicit tool schemas, and document understanding that has to stay anchored to evidence.",
     "availability": "Open to research internships and ML engineering roles",
     "focus": [
       "Multimodal learning",
-      "Medical imaging",
       "Clinical AI auditing",
-      "Robustness & calibration"
+      "Robustness & calibration",
+      "LLM & agent systems",
+      "NLP",
+      "Medical imaging"
     ],
     "social": {
       "github": "https://github.com/Uman-66",
@@ -56,7 +58,22 @@
         "Vision Transformers",
         "GNNs",
         "LLMs",
-        "Multimodal Late Fusion"
+        "Multimodal Late Fusion",
+        "Transformers",
+        "Transfer Learning"
+      ]
+    },
+    {
+      "category": "LLMs & NLP",
+      "items": [
+        "LangGraph",
+        "GPT-4o / Vision",
+        "Fireworks AI",
+        "RAG (FAISS)",
+        "Document Parsing & OCR",
+        "ElevenLabs Agents",
+        "Tool Schemas",
+        "Guardrails & Evaluation"
       ]
     },
     {
@@ -80,7 +97,9 @@
         "Pandas",
         "NumPy",
         "Scikit-learn",
-        "OpenCV"
+        "OpenCV",
+        "Matplotlib",
+        "Jupyter"
       ]
     },
     {
@@ -92,7 +111,21 @@
         "W&B",
         "MLflow",
         "PostgreSQL",
-        "Git/GitHub"
+        "Git/GitHub",
+        "Supabase",
+        "Deno Edge Functions"
+      ]
+    },
+    {
+      "category": "Full-stack & Tooling",
+      "items": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Flask",
+        "Streamlit",
+        "Playwright"
       ]
     }
   ],

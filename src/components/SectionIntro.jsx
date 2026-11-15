@@ -11,6 +11,7 @@ const TONES = {
   Credentials: "#f0a6c0",
   "International Competition": "#a7c4dd",
   Writing: "#c9b8f0",
+  "Community & teaching": "#b8d98a",
   Contact: "#7fc9e8",
 };
 

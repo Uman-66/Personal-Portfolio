@@ -3,6 +3,7 @@ import About from "@/components/sections/About";
 import Work from "@/components/sections/Work";
 import Research from "@/components/sections/Research";
 import Experience from "@/components/sections/Experience";
+import VoluntaryRoles from "@/components/sections/VoluntaryRoles";
 import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
 import Credentials from "@/components/sections/Credentials";
@@ -15,14 +16,15 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <Work />
       <Research />
+      <Work />
+      <InternationalCompetition />
       <Experience />
+      <VoluntaryRoles />
       <Skills />
       <Writing />
       <Achievements />
       <Credentials />
-      <InternationalCompetition />
       <Contact />
     </>
   );

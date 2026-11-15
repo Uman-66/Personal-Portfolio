@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 import data from "@/data/portfolio.json";
 
 export default function About() {
-  const { personal, education, voluntaryRoles } = data;
+  const { personal, education } = data;
 
   return (
     <section id="about" className="section">
@@ -14,7 +14,7 @@ export default function About() {
           index="01"
           label="Profile"
           title="Reliability first, then accuracy."
-          description="ML Engineer specializing in trustworthy multimodal systems for healthcare, with focus on clinical AI auditing and robustness under missing data."
+          description="ML Engineer specializing in trustworthy multimodal systems for healthcare — clinical AI auditing, robustness under missing data, and LLM/NLP systems."
           meta={personal.location}
         />
 
@@ -97,45 +97,6 @@ export default function About() {
                   <dt className="mt-3 font-mono text-[12px] uppercase tracking-[0.16em] text-[var(--ink)]">
                     {stat.label}
                   </dt>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={0.16}>
-          <div className="mt-14">
-            <div
-              className="flex items-center gap-4 border-b pb-3"
-              style={{ borderColor: "var(--line)" }}
-            >
-              <span className="eyebrow">Voluntary roles</span>
-              <span className="flex-1" />
-              <span className="font-mono text-[12px] uppercase tracking-[0.18em] text-[var(--ink)]">
-                {voluntaryRoles.length} roles
-              </span>
-            </div>
-
-            <dl className="grid gap-x-8 gap-y-8 pt-6 md:grid-cols-2">
-              {voluntaryRoles.map((role) => (
-                <div key={`${role.title}-${role.institution}`}>
-                  <dt className="font-display text-[clamp(1.45rem,1.8vw,1.75rem)] leading-tight text-[var(--ink)]">{role.title}</dt>
-                  <dd className="mt-2 font-mono text-[12px] uppercase tracking-[0.16em] text-[var(--mark)]">
-                    {role.institution}
-                    {role.period ? ` · ${role.period}` : ""}
-                  </dd>
-                  <dd className="mt-3 text-[15px] leading-relaxed text-[var(--muted)]">
-                    {role.description}
-                  </dd>
-                  {role.tech?.length ? (
-                    <dd className="mt-3 flex flex-wrap gap-1.5">
-                      {role.tech.map((item) => (
-                        <span key={item} className="pill">
-                          {item}
-                        </span>
-                      ))}
-                    </dd>
-                  ) : null}
                 </div>
               ))}
             </dl>
