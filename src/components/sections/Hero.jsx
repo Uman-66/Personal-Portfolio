@@ -68,6 +68,22 @@ export default function Hero() {
               >
                 GitHub
               </a>
+              <a
+                href={personal.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn ghost"
+              >
+                LinkedIn
+              </a>
+              <a
+                href={personal.social.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn ghost"
+              >
+                LeetCode
+              </a>
             </motion.div>
           </div>
 
